@@ -1,0 +1,66 @@
+header[role="banner"] {
+.abs;
+.top(0);
+.left(0);
+width: 100%;
+.h(4);
+.trans-bg(@black; 0.8);	
+z-index: 100;
+
+	@media (min-width: @screen-sm) {
+	.h(5);
+	}
+
+	a {
+	.block;
+	.h(4);
+	width: 100%;
+	.bg-img("logo.png");
+	.bg-repeat(no-repeat);
+	background-position: left center;
+	.bg-size(contain);
+	.no-text-dec;
+	.indent(-999); 
+		&:hover, &:active, &:focus {
+			.opacity(0.7);
+		}
+		@media (min-width: @screen-sm) {
+		.w(17.5);
+		.h(5);
+		}
+	}
+	
+	button#site-nav-btn {
+	.bg-col(@trans);
+	.border(@white; 0.1);
+	.col(@white);
+	.pad();
+	.mag-top(1);
+	.h(2);
+	.w(2);
+	.fright;
+		i {
+		.block;
+		.h(2);
+		.line-h(2);	
+		.font-size(1);
+		}
+		@media (min-width: @screen-sm) {
+		.h(3);
+		.w(3);
+			i {
+			.h(3);
+			.line-h(3);	
+			.font-size(1.6);	
+			}
+		}
+		&:hover, &:active, &:focus {
+		.col(@gray);
+		.border-col(@gray);	
+		}
+		&.active {
+		.col(@orange);	
+		.border-col(@blue);		
+		}
+	}
+}

@@ -1,0 +1,170 @@
+#post-comments {
+.bg-col(@orange);
+.border-top(@white; 0.1);
+.over-hide;
+.transition(0.5s, ease-in-out);
+.min-h(7);
+
+	
+	&.comments-closed {
+	.h(5);	
+		.btn {
+			&:after {
+			font-family: FontAwesome;
+			content: "\f055";	
+			}	
+		}
+		@media (min-width: @screen-sm) {
+		.h(7);		
+		}
+	}
+	&.comments-open {
+	height: auto;	
+		.btn {
+			&:after {
+			font-family: FontAwesome;
+			content: "\f056";	
+			}	
+		}
+	}	
+	
+	.comments-header {
+	.h(5);
+		@media (min-width: @screen-sm) {
+		.h(7);	
+		}
+		h2 {
+		.line-h(5);	
+		.mag-top(0);
+		.mag-bot(0);
+		.caps;
+		.col(@white);
+		.font-ex-lite;
+		.fleft;
+		.font-size(2.8);
+			i, span {
+			.rel;
+			.in-block;
+			.w(2.2);
+			.h(2.2);
+			.line-h(2);
+			.border(@white; 0.1);	
+			.font-size(1.4);
+			text-align: center;
+			.top(-0.5);
+			.mag-right(0.5);
+			}
+			span {
+			.font-normal;	
+			.top(-0.5);
+			}
+			
+			@media (min-width: @screen-sm) {
+			.line-h(7);
+			.font-size(3.8);
+				i, span {
+				.w(3);
+				.h(3);	
+				.line-h(2.8);
+				.font-size(1.6);
+				.top(-0.8);
+				}	
+				
+				span {
+				.top(-0.7);	
+				}
+			}
+		}
+		
+		.btn {
+		.mag-top(1.5);
+		.col(@white);
+		.fright;	
+		.pad-all(0);
+		.bg-col(@trans);
+		.border(@white; 0.1);
+		.h(2.2);
+		.w(2.2);
+		.transition(0.2s, ease);
+			&:hover, &:active, &:focus {
+			.col(@black);
+			.bg-col(@white);	
+			}
+			
+			@media (min-width: @screen-sm) {
+			.mag-top(2);
+			.h(3);
+			.w(3);	
+			}	
+		}	
+		
+	}
+}
+
+.comments-content {
+.bg-col(@white);	
+.pad-all(2);
+.mag-bot(2);
+	h3 {
+	.mag-top(0);	
+	.col(@Dkblue);
+	.font-size(2);
+	.pad-bot(1);
+	.mag-bot(0);
+	}
+	
+	.navigation {
+	.pad(0.5;1;0.5;1);
+	.mag-top(1);
+	.mag-bot(2);
+	.bg-col(@blue);
+	.over-hide;
+	
+		a {
+		.col(@white);
+			&:hover, &:active, &:focus {
+			.col(@orange);	
+			}	
+		}
+	
+		.alignleft, .alignright {
+		width: 50%;	
+		}
+	
+		.alignleft {
+		.fleft;	
+		}
+	
+		.alignright {
+		.fright;	
+		text-align: right;
+		}
+	
+	}
+	
+	ol.commentlist {
+	list-style: none;	
+	.pad-left(0);
+	
+		li {
+		.bg-col(@grayLt);
+		.pad-all(1);
+		.mag-bot(1);
+		
+			&:last-child {
+			.mag-bot(2);	
+			}	
+		}
+	}
+	
+	.comment-author {
+		.mag-bot(0.5);
+		.caps;
+		.font-size(1.8);
+		.font-lite;
+		.col(@Dkblue);
+			img {
+			.mag-right(1);	
+			}
+	}
+}
