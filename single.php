@@ -8,6 +8,10 @@
 <?php get_template_parts( array( 'parts/shared/header' ) ); ?>
 
 <div class="container">
+	
+	<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+    <?php if(function_exists('bcn_display')){ bcn_display();}?>
+	</div>	
 
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	
@@ -101,7 +105,7 @@
 global $cpage;
 //echo '<pre>';print_r($cpage);echo '</pre>';	
 ?>
-<div id="post-comments" class="<?php echo ($cpage > 0) ? 'comments-open':'comments-closed' ?>">
+<div id="post-comments" class="<?php echo (get_comments_number() > 0) ? 'comments-open':'comments-closed' ?>">
 	<div class="container">
 	<div class="row">
 		<div class="col-xs-9 col-xs-offset-3">

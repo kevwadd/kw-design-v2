@@ -20,5 +20,10 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<!-- <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/> -->
 		<?php wp_head(); ?>
+		<?php
+			if (is_home()) {
+			$body_class = 'blog';	
+			}
+		?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class($body_class); ?>>
